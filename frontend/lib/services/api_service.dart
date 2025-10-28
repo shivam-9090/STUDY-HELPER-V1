@@ -3,7 +3,9 @@ import 'package:http/http.dart' as http;
 
 class ApiService {
   // Change this to your backend URL
-  static const String baseUrl = 'http://localhost:5000/api';
+  // Use 10.0.2.2 for Android emulator (maps to host machine's localhost)
+  // Use localhost:5000 for web/desktop
+  static const String baseUrl = 'http://10.0.2.2:5000/api';
 
   Future<Map<String, dynamic>> askQuestion(String question, {String? subject}) async {
     try {
