@@ -2,10 +2,17 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  // Change this to your backend URL
-  // Use 10.0.2.2 for Android emulator (maps to host machine's localhost)
-  // Use localhost:5000 for web/desktop
-  static const String baseUrl = 'http://10.0.2.2:5000/api';
+  // Production backend URL - Replace with your actual Render URL after deployment
+  static const String _productionUrl = 'https://study-helper-backend.onrender.com/api';
+  
+  // Local development backend URL
+  static const String _developmentUrl = 'http://10.0.2.2:5000/api'; // For Android emulator
+  // static const String _developmentUrl = 'http://localhost:5000/api'; // For web/desktop
+  
+  // Toggle this to switch between development and production
+  static const bool _isProduction = true;
+  
+  static String get baseUrl => _isProduction ? _productionUrl : _developmentUrl;
 
   Future<Map<String, dynamic>> askQuestion(String question, {String? subject}) async {
     try {

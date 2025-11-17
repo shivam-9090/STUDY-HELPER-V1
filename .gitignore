@@ -5,6 +5,7 @@ frontend/.flutter-plugins-dependencies
 frontend/.packages
 frontend/build/
 frontend/pubspec.lock
+frontend/cache/
 
 # Python
 backend/__pycache__/
@@ -12,6 +13,8 @@ backend/*.pyc
 backend/venv/
 backend/.env
 backend/*.log
+backend/study_helper.db
+backend/instance/
 
 # IDE
 .vscode/
@@ -19,7 +22,20 @@ backend/*.log
 *.swp
 *.swo
 *~
+*.iml
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Build outputs
+*.apk
+*.aab
+*.ipa
+frontend/android/app/release/
+frontend/android/key.properties
+
+# Environment files
+.env
+.env.local
+.env.production
