@@ -22,7 +22,7 @@ Future<void> _createDefaultUser() async {
     // Use production URL or development URL based on environment
     const bool isProduction = true; // Change to false for local development
     final String apiUrl = isProduction 
-        ? 'https://study-helper-backend.onrender.com/api/user/create'
+        ? 'https://study-helper-backend-ivxo.onrender.com/api/user/create'
         : 'http://10.0.2.2:5000/api/user/create';
     
     final response = await http.post(

@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  // Production backend URL - Replace with your actual Render URL after deployment
-  static const String _productionUrl = 'https://study-helper-backend.onrender.com/api';
+  // Production backend URL - Your Render backend
+  static const String _productionUrl = 'https://study-helper-backend-ivxo.onrender.com/api';
   
   // Local development backend URL
   static const String _developmentUrl = 'http://10.0.2.2:5000/api'; // For Android emulator
